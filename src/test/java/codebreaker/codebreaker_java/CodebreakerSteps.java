@@ -34,12 +34,12 @@ public class CodebreakerSteps {
     @Given("^the secret code is (. . . .)$")                           
     public void theSecretCodeIs(String code) {
     	createGameMockMessenger();
-		game.start("r g y c");
+		game.start(code);
     }                                     
                                           
     @When("^I guess (. . . .)$")            
-    public void iGuess(String code) {            
-    	game.guess(code);
+    public void iGuess(String guess) {            
+    	game.guess(guess);
     }                                     
                                           
     @Then("^the mark should be (.*)$")                                

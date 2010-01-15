@@ -15,34 +15,45 @@ public class GameTest extends TestCase {
 	public void setUp() throws Exception {
 		messenger = mock(Messenger.class); 
 		game = new Game(messenger);
-		game.start("r g y c");
 	}
 
 	@Test
 	public void testSendsWelcomeMessage() throws Exception {
+		game.start("r g y c");
 		verify(messenger).puts("Welcome to Codebreaker!");
 	}
 	
 	@Test
 	public void testPromptsForFirstGuess() throws Exception {
+		game.start("r g y c");
 		verify(messenger).puts("Enter guess:");
 	}
 	
 	@Test
 	public void testFourCorrectColorsInCorrectPlacesMarksBBBB() throws Exception {
+		game.start("r g y c");
 		game.guess("r g y c");
 		verify(messenger).mark("bbbb");
 	}
 	
 	@Test
 	public void testFourCorrectColorTwoCorrectPlacesMarksBBWW() throws Exception {
+		game.start("r g y c");
 		game.guess("r g c y");
 		verify(messenger).mark("bbww");
 	}
 	
 	@Test
 	public void testFourCorrectColorsOneCorrectPlaceMarksBWWW() throws Exception {
+		game.start("r g y c");
 		game.guess("y r g c");
 		verify(messenger).mark("bwww");
+	}
+	
+	@Test
+	public void testDuplicatesInGuessThatMatchPegInCodeByColorAndPosition() throws Exception {
+		game.start("r y g c");
+		game.guess("r y g g");
+	//	verify(messenger).mark("bbb");
 	}
 }
