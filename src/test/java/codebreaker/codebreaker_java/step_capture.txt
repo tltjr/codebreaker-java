@@ -1,0 +1,277 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Building codebreaker-java
+[INFO]    task-segment: [integration-test]
+[INFO] ------------------------------------------------------------------------
+[INFO] [resources:resources {execution: default-resources}]
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/tltjr/workspace/codebreaker-java/src/main/resources
+[INFO] [compiler:compile {execution: default-compile}]
+[INFO] Nothing to compile - all classes are up to date
+[INFO] [resources:testResources {execution: default-testResources}]
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/tltjr/workspace/codebreaker-java/src/test/resources
+[INFO] [compiler:testCompile {execution: default-testCompile}]
+[INFO] Nothing to compile - all classes are up to date
+[INFO] [surefire:test {execution: default-test}]
+[INFO] Surefire report directory: /home/tltjr/workspace/codebreaker-java/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running codebreaker.codebreaker_java.GameTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.329 sec
+Running codebreaker.codebreaker_java.AppTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+
+Results :
+
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] [jar:jar {execution: default-jar}]
+[INFO] Building jar: /home/tltjr/workspace/codebreaker-java/target/codebreaker-java-0.0.1-SNAPSHOT.jar
+[INFO] [cuke4duke:cucumber {execution: run-features}]
+[INFO] Code:
+[INFO] 
+[INFO] Features:
+[INFO]   * features/codebreaker_starts_game.feature
+[INFO]   * features/codebreaker_submits_guess.feature
+[INFO]   * features/codebreaker_submits_guess_1.feature
+[INFO] Parsing feature files took 0m2.807s
+[INFO] 
+[INFO] Code:
+[INFO]   * /home/tltjr/workspace/codebreaker-java/target/test-classes/codebreaker/codebreaker_java/CodebreakerSteps.class
+[INFO]   * /home/tltjr/workspace/codebreaker-java/target/test-classes/codebreaker/codebreaker_java/AppTest.class
+[INFO]   * /home/tltjr/workspace/codebreaker-java/target/test-classes/codebreaker/codebreaker_java/GameTest.class
+[INFO] 
+[INFO] Feature: code-breaker starts game
+[INFO] 
+[INFO]     As a code-breaker
+[INFO]     I want to start a game
+[INFO]     So that I can break the code
+[INFO] 
+[INFO]   Scenario: start game[90m                          # features/codebreaker_starts_game.feature:7[0m
+[INFO]     [32mGiven I am not yet playing[90m                  # CodebreakerSteps.iAmNotYetPlaying()[0m[0m
+[INFO]     [32mWhen I start a new game[90m                     # CodebreakerSteps.iStartANewGame()[0m[0m
+[INFO]     [32mThen I should see "[32m[1mWelcome to Codebreaker![0m[0m[32m"[90m # CodebreakerSteps.iShouldSeeWelcomeToCodebreaker(String)[0m[0m
+[INFO]     [32mAnd I should see "[32m[1mEnter guess:[0m[0m[32m"[90m             # CodebreakerSteps.iShouldSeeWelcomeToCodebreaker(String)[0m[0m
+[INFO] 
+[INFO] Feature: code-breaker submits guess
+[INFO] 
+[INFO]     The code-breaker submits a guess of four colored
+[INFO]     pegs. The game marks the guess with black and
+[INFO]     white "marker" pegs.
+[INFO] 
+[INFO]     For each peg in the guess that matches the color
+[INFO]     and position of a peg in the secret code, the
+[INFO]     mark includes one black peg. For each additional
+[INFO]     peg in the guess that matches the color but not
+[INFO]     the position of a peg in the secret code, a
+[INFO]     white peg is added to the mark.
+[INFO] 
+[INFO]   Scenario Outline: submit guess[90m    # features/codebreaker_submits_guess.feature:14[0m
+[INFO]     [36mGiven the secret code is <code>[90m # features/codebreaker_submits_guess.feature:15[0m[0m
+[INFO]     [36mWhen I guess <guess>[90m            # features/codebreaker_submits_guess.feature:16[0m[0m
+[INFO]     [36mThen the mark should be <mark>[90m  # features/codebreaker_submits_guess.feature:17[0m[0m
+[INFO] 
+[INFO]     Scenarios: all colors correct
+[INFO]       | [36m[1mcode   [0m[0m[36m[0m |[0m [36m[1mguess  [0m[0m[36m[0m |[0m [36m[1mmark[0m[0m[36m[0m |[0m
+[INFO]       | [33mr g y c[0m[0m |[0m [33mr g y c[0m[0m |[0m [33mbbbb[0m[0m |[0m
+[INFO]       | [33mr g y c[0m[0m |[0m [33mr g c y[0m[0m |[0m [33mbbww[0m[0m |[0m
+[INFO]       | [33mr g y c[0m[0m |[0m [33my r g c[0m[0m |[0m [33mbwww[0m[0m |[0m
+[INFO]       | [33mr g y c[0m[0m |[0m [33mc r g y[0m[0m |[0m [33mwwww[0m[0m |[0m
+[INFO] 
+[INFO]     Scenarios: 3 colors correct
+[INFO]       | [36m[1mcode   [0m[0m[36m[0m |[0m [36m[1mguess  [0m[0m[36m[0m |[0m [36m[1mmark[0m[0m[36m[0m |[0m
+[INFO]       | [33mr g y c[0m[0m |[0m [33mw g w c[0m[0m |[0m [33mbbb [0m[0m |[0m
+[INFO]       | [33mr g y c[0m[0m |[0m [33mw r y c[0m[0m |[0m [33mbbw [0m[0m |[0m
+[INFO]       | [33mr g y c[0m[0m |[0m [33mw r g c[0m[0m |[0m [33mbww [0m[0m |[0m
+[INFO]       | [33mr g y c[0m[0m |[0m [33mw r g y[0m[0m |[0m [33mwww [0m[0m |[0m
+[INFO] 
+[INFO]     Scenarios: 2 colors correct
+[INFO]       | [36m[1mcode   [0m[0m[36m[0m |[0m [36m[1mguess  [0m[0m[36m[0m |[0m [36m[1mmark[0m[0m[36m[0m |[0m
+[INFO]       | [33mr g y c[0m[0m |[0m [33mw g w c[0m[0m |[0m [33mbb  [0m[0m |[0m
+[INFO]       | [33mr g y c[0m[0m |[0m [33mw r w c[0m[0m |[0m [33mbw  [0m[0m |[0m
+[INFO]       | [33mr g y c[0m[0m |[0m [33mg w c w[0m[0m |[0m [33mww  [0m[0m |[0m
+[INFO] 
+[INFO]     Scenarios: 1 color correct
+[INFO]       | [36m[1mcode   [0m[0m[36m[0m |[0m [36m[1mguess  [0m[0m[36m[0m |[0m [36m[1mmark[0m[0m[36m[0m |[0m
+[INFO]       | [33mr g y c[0m[0m |[0m [33mr w w w[0m[0m |[0m [33mb   [0m[0m |[0m
+[INFO]       | [33mr g y c[0m[0m |[0m [33mw w r w[0m[0m |[0m [33mw   [0m[0m |[0m
+[INFO] 
+[INFO] Feature: code-breaker submits guess
+[INFO] 
+[INFO]     The code-breaker submits a guess of four colored
+[INFO]     pegs. The game marks the guess with black and
+[INFO]     white "marker" pegs.
+[INFO] 
+[INFO]     For each peg in the guess that matches the color
+[INFO]     and position of a peg in the secret code, the
+[INFO]     mark includes one black peg. For each additional
+[INFO]     peg in the guess that matches the color but not
+[INFO]     the position of a peg in the secret code, a
+[INFO]     white peg is added to the mark.
+[INFO] 
+[INFO]   Scenario: all four correct colors in correct positions[90m # features/codebreaker_submits_guess_1.feature:14[0m
+[INFO]     [33mGiven the secret code is r g y c[90m                     # features/codebreaker_submits_guess_1.feature:15[0m[0m
+[INFO]     [33mWhen I guess r g y c[90m                                 # features/codebreaker_submits_guess_1.feature:16[0m[0m
+[INFO]     [33mThen the mark should be bbbb[90m                         # features/codebreaker_submits_guess_1.feature:17[0m[0m
+[INFO] 
+[INFO]   Scenario: all four correct colors, two in correct positions[90m # features/codebreaker_submits_guess_1.feature:19[0m
+[INFO]     [33mGiven the secret code is r g y c[90m                          # features/codebreaker_submits_guess_1.feature:20[0m[0m
+[INFO]     [33mWhen I guess r g c y[90m                                      # features/codebreaker_submits_guess_1.feature:21[0m[0m
+[INFO]     [33mThen the mark should be bbww[90m                              # features/codebreaker_submits_guess_1.feature:22[0m[0m
+[INFO] 
+[INFO]   Scenario: all four correct colors, one in the correct position[90m # features/codebreaker_submits_guess_1.feature:24[0m
+[INFO]     [33mGiven the secret code is r g y c[90m                             # features/codebreaker_submits_guess_1.feature:25[0m[0m
+[INFO]     [33mWhen I guess y r g c[90m                                         # features/codebreaker_submits_guess_1.feature:26[0m[0m
+[INFO]     [33mThen the mark should be bwww[90m                                 # features/codebreaker_submits_guess_1.feature:27[0m[0m
+[INFO] 
+[INFO]   Scenario: all four correct colors, none in correct positions[90m # features/codebreaker_submits_guess_1.feature:29[0m
+[INFO]     [33mGiven the secret code is r g y c[90m                           # features/codebreaker_submits_guess_1.feature:30[0m[0m
+[INFO]     [33mWhen I guess c r g y[90m                                       # features/codebreaker_submits_guess_1.feature:31[0m[0m
+[INFO]     [33mThen the mark should be wwww[90m                               # features/codebreaker_submits_guess_1.feature:32[0m[0m
+[INFO] 
+[INFO] 18 scenarios ([33m17 undefined[0m, [32m1 passed[0m)
+[INFO] 55 steps ([33m51 undefined[0m, [32m4 passed[0m)
+[INFO] 0m1.545s
+[INFO] [33m
+[INFO] You can implement step definitions for undefined steps with these snippets:
+[INFO] 
+[INFO] @Given("^the secret code is r g y c$")
+[INFO] @Pending
+[INFO] public void theSecretCodeIsRGYC() {
+[INFO] }
+[INFO] 
+[INFO] @When("^I guess r g y c$")
+[INFO] @Pending
+[INFO] public void iGuessRGYC() {
+[INFO] }
+[INFO] 
+[INFO] @Then("^the mark should be bbbb$")
+[INFO] @Pending
+[INFO] public void theMarkShouldBeBbbb() {
+[INFO] }
+[INFO] 
+[INFO] @When("^I guess r g c y$")
+[INFO] @Pending
+[INFO] public void iGuessRGCY() {
+[INFO] }
+[INFO] 
+[INFO] @Then("^the mark should be bbww$")
+[INFO] @Pending
+[INFO] public void theMarkShouldBeBbww() {
+[INFO] }
+[INFO] 
+[INFO] @When("^I guess y r g c$")
+[INFO] @Pending
+[INFO] public void iGuessYRGC() {
+[INFO] }
+[INFO] 
+[INFO] @Then("^the mark should be bwww$")
+[INFO] @Pending
+[INFO] public void theMarkShouldBeBwww() {
+[INFO] }
+[INFO] 
+[INFO] @When("^I guess c r g y$")
+[INFO] @Pending
+[INFO] public void iGuessCRGY() {
+[INFO] }
+[INFO] 
+[INFO] @Then("^the mark should be wwww$")
+[INFO] @Pending
+[INFO] public void theMarkShouldBeWwww() {
+[INFO] }
+[INFO] 
+[INFO] @When("^I guess w g w c$")
+[INFO] @Pending
+[INFO] public void iGuessWGWC() {
+[INFO] }
+[INFO] 
+[INFO] @Then("^the mark should be bbb$")
+[INFO] @Pending
+[INFO] public void theMarkShouldBeBbb() {
+[INFO] }
+[INFO] 
+[INFO] @When("^I guess w r y c$")
+[INFO] @Pending
+[INFO] public void iGuessWRYC() {
+[INFO] }
+[INFO] 
+[INFO] @Then("^the mark should be bbw$")
+[INFO] @Pending
+[INFO] public void theMarkShouldBeBbw() {
+[INFO] }
+[INFO] 
+[INFO] @When("^I guess w r g c$")
+[INFO] @Pending
+[INFO] public void iGuessWRGC() {
+[INFO] }
+[INFO] 
+[INFO] @Then("^the mark should be bww$")
+[INFO] @Pending
+[INFO] public void theMarkShouldBeBww() {
+[INFO] }
+[INFO] 
+[INFO] @When("^I guess w r g y$")
+[INFO] @Pending
+[INFO] public void iGuessWRGY() {
+[INFO] }
+[INFO] 
+[INFO] @Then("^the mark should be www$")
+[INFO] @Pending
+[INFO] public void theMarkShouldBeWww() {
+[INFO] }
+[INFO] 
+[INFO] @Then("^the mark should be bb$")
+[INFO] @Pending
+[INFO] public void theMarkShouldBeBb() {
+[INFO] }
+[INFO] 
+[INFO] @When("^I guess w r w c$")
+[INFO] @Pending
+[INFO] public void iGuessWRWC() {
+[INFO] }
+[INFO] 
+[INFO] @Then("^the mark should be bw$")
+[INFO] @Pending
+[INFO] public void theMarkShouldBeBw() {
+[INFO] }
+[INFO] 
+[INFO] @When("^I guess g w c w$")
+[INFO] @Pending
+[INFO] public void iGuessGWCW() {
+[INFO] }
+[INFO] 
+[INFO] @Then("^the mark should be ww$")
+[INFO] @Pending
+[INFO] public void theMarkShouldBeWw() {
+[INFO] }
+[INFO] 
+[INFO] @When("^I guess r w w w$")
+[INFO] @Pending
+[INFO] public void iGuessRWWW() {
+[INFO] }
+[INFO] 
+[INFO] @Then("^the mark should be b$")
+[INFO] @Pending
+[INFO] public void theMarkShouldBeB() {
+[INFO] }
+[INFO] 
+[INFO] @When("^I guess w w r w$")
+[INFO] @Pending
+[INFO] public void iGuessWWRW() {
+[INFO] }
+[INFO] 
+[INFO] @Then("^the mark should be w$")
+[INFO] @Pending
+[INFO] public void theMarkShouldBeW() {
+[INFO] }[0m
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESSFUL
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 19 seconds
+[INFO] Finished at: Thu Jan 14 16:16:54 EST 2010
+[INFO] Final Memory: 12M/80M
+[INFO] ------------------------------------------------------------------------
