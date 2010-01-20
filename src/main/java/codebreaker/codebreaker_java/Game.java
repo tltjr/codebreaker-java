@@ -9,8 +9,8 @@ public class Game {
 		this.messenger = messenger;
 	}
 
-	public void start(String code) {
-		this.code = code;
+	public void start(Generator generator) {
+		this.code = generator.code();
 		messenger.puts("Welcome to Codebreaker!");
 		messenger.puts("Enter guess:");
 	}
@@ -20,17 +20,17 @@ public class Game {
 		int i=0;
 		while(i<code.length()) {
 			if(code.charAt(i)==guess.charAt(i)) {
-				result[i/2] = 'b';
+				result[i] = 'b';
 			}
 			else {
 				int indexOf = code.indexOf(guess.charAt(i));
 				if(indexOf>-1){
-					if(result[indexOf/2]!='b') {
-						result[indexOf/2] = 'w';
+					if(result[indexOf]!='b') {
+						result[indexOf] = 'w';
 					}
 				}
 			}
-			i = i+2;
+			i ++;
 		}
 		messenger.mark(charArrayToString(result));
 	}

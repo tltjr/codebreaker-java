@@ -1,13 +1,28 @@
-[32m.[0m[32m.[0m[32m.[0m[32m.[0m[36m-[0m[36m-[0m[36m-[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+[32m.[0m[32m.[0m[33mP[0m[36m-[0m[36m-[0m
 
-[36m0.3560000[0m [32m^I start a new game$[0m[90m                          # CodebreakerSteps.iStartANewGame()[0m
-  [36m0.3560000[0m [32mWhen I start a new game[0m[90m                     # features/codebreaker_starts_game.feature:9[0m
-[36m0.0200000[0m [32m^I am not yet playing$[0m[90m                        # CodebreakerSteps.iAmNotYetPlaying()[0m
-  [36m0.0200000[0m [32mGiven I am not yet playing[0m[90m                  # features/codebreaker_starts_game.feature:8[0m
-[36m0.0175000[0m [32m^I should see "([^"]*)"$[0m[90m                      # CodebreakerSteps.iShouldSeeWelcomeToCodebreaker(String)[0m
-  [36m0.0230000[0m [32mThen I should see "[32m[1mWelcome to Codebreaker![0m[0m[32m"[0m[90m # features/codebreaker_starts_game.feature:10[0m
-  [36m0.0120000[0m [32mAnd I should see "[32m[1mEnter guess:[0m[0m[32m"[0m[90m             # features/codebreaker_starts_game.feature:11[0m
+[36m0.0200000[0m [32m^6 colors$[0m[90m                                                                 # CodebreakerSteps.sixColors()[0m
+  [36m0.0200000[0m [32mGiven 6 colors[0m[90m                                                           # features/game_generates_secret_code.feature:8[0m
+[36m0.0140000[0m [33m^I play (.*) games$[0m[90m                                                        # CodebreakerSteps.iPlayXGames(String)[0m
+  [36m0.0140000[0m [33mWhen I play [33m[1m10,000[0m[0m[33m games[0m[90m                                                 # features/game_generates_secret_code.feature:10[0m
+[36m0.0030000[0m [32m^4 positions$[0m[90m                                                              # CodebreakerSteps.fourPositions()[0m
+  [36m0.0030000[0m [32mAnd 4 positions[0m[90m                                                          # features/game_generates_secret_code.feature:9[0m
+[36m0.0000000[0m [36m^I start a new game$[0m[90m                                                       # CodebreakerSteps.iStartANewGame()[0m
+  [31mNOT MATCHED BY ANY STEPS[0m
+[36m0.0000000[0m [36m^I am not yet playing$[0m[90m                                                     # CodebreakerSteps.iAmNotYetPlaying()[0m
+  [31mNOT MATCHED BY ANY STEPS[0m
+[36m0.0000000[0m [36m^the secret code is (....)$[0m[90m                                                # CodebreakerSteps.theSecretCodeIs(String)[0m
+  [31mNOT MATCHED BY ANY STEPS[0m
+[36m0.0000000[0m [36m^I should see "([^"]*)"$[0m[90m                                                   # CodebreakerSteps.iShouldSeeWelcomeToCodebreaker(String)[0m
+  [31mNOT MATCHED BY ANY STEPS[0m
+[36m0.0000000[0m [36m^the mark should be (.*)$[0m[90m                                                  # CodebreakerSteps.theMarkShouldBe(String)[0m
+  [31mNOT MATCHED BY ANY STEPS[0m
+[36m0.0000000[0m [36m^I guess (....)$[0m[90m                                                           # CodebreakerSteps.iGuess(String)[0m
+  [31mNOT MATCHED BY ANY STEPS[0m
+[36m0.0000000[0m [36m^each color should appear no more than once in each secret code$[0m[90m           # CodebreakerSteps.eachColorShouldAppearNoMoreThanOnceInEachSecretCode()[0m
+  [31mNOT MATCHED BY ANY STEPS[0m
+[36m0.0000000[0m [36m^each color should appear between 1500 and 1800 times in each position$[0m[90m    # CodebreakerSteps.eachColorShouldAppearBetween1500And1800TimesInEachPosition()[0m
+  [31mNOT MATCHED BY ANY STEPS[0m
 
-17 scenarios ([32m17 passed[0m)
-52 steps ([32m52 passed[0m)
-0m2.132s
+1 scenario ([33m1 pending[0m)
+5 steps ([36m2 skipped[0m, [33m1 pending[0m, [32m2 passed[0m)
+0m0.252s

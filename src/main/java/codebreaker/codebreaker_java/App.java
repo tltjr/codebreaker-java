@@ -11,7 +11,7 @@ public class App
     {
     	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     	Game g = new Game(new Messenger());
-    	g.start("r g y c");
+    	g.start(new Generator());
     	String guess = "";
     	while(true) {
     		try {
