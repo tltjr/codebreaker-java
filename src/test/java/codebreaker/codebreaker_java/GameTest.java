@@ -6,6 +6,8 @@ import static org.mockito.Mockito.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import cuke4duke.Pending;
+
 public class GameTest extends TestCase {
 
 	private Game game;
@@ -54,6 +56,13 @@ public class GameTest extends TestCase {
 	public void testDuplicatesInGuessThatMatchPegInCodeByColorAndPosition() throws Exception {
 		game.start("r y g c");
 		game.guess("r y g g");
-	//	verify(messenger).mark("bbb");
+		verify(messenger).mark("bbb");
+	}
+	
+	@Test
+	public void testTwoCorrectColorsWrongPlaces() throws Exception {
+		game.start("r g y c");
+		game.guess("g w c w");
+		verify(messenger).mark("ww");
 	}
 }

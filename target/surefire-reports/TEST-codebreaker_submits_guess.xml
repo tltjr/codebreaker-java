@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" name="code-breaker submits guess" tests="16" time="1.094000">
+<testcase classname="code-breaker submits guess.submit guess" name="submit guess (outline example : | r g y c | r g y c | bbbb |)" time="0.075000">
+</testcase>
+<testcase classname="code-breaker submits guess.submit guess" name="submit guess (outline example : | r g y c | r g c y | bbww |)" time="0.036000">
+</testcase>
+<testcase classname="code-breaker submits guess.submit guess" name="submit guess (outline example : | r g y c | y r g c | bwww |)" time="0.057000">
+</testcase>
+<testcase classname="code-breaker submits guess.submit guess" name="submit guess (outline example : | r g y c | c r g y | wwww |)" time="0.073000">
+</testcase>
+<testcase classname="code-breaker submits guess.submit guess" name="submit guess (outline example : | r g y c | w g y c | bbb |)" time="0.050000">
+</testcase>
+<testcase classname="code-breaker submits guess.submit guess" name="submit guess (outline example : | r g y c | w r y c | bbw |)" time="0.052000">
+</testcase>
+<testcase classname="code-breaker submits guess.submit guess" name="submit guess (outline example : | r g y c | w r g c | bww |)" time="0.050000">
+</testcase>
+<testcase classname="code-breaker submits guess.submit guess" name="submit guess (outline example : | r g y c | w r g y | www |)" time="0.042000">
+</testcase>
+<testcase classname="code-breaker submits guess.submit guess" name="submit guess (outline example : | r g y c | w g w c | bb |)" time="0.036000">
+</testcase>
+<testcase classname="code-breaker submits guess.submit guess" name="submit guess (outline example : | r g y c | w r w c | bw |)" time="0.029000">
+</testcase>
+<testcase classname="code-breaker submits guess.submit guess" name="submit guess (outline example : | r g y c | g w c w | ww |)" time="0.027000">
+</testcase>
+<testcase classname="code-breaker submits guess.submit guess" name="submit guess (outline example : | r g y c | r w w w | b |)" time="0.032000">
+</testcase>
+<testcase classname="code-breaker submits guess.submit guess" name="submit guess (outline example : | r g y c | w w r w | w |)" time="0.122000">
+</testcase>
+<testcase classname="code-breaker submits guess.submit guess" name="submit guess (outline example : | r y g c | r y g g | bbb |)" time="0.049000">
+</testcase>
+<testcase classname="code-breaker submits guess.submit guess" name="submit guess (outline example : | r y g c | r y c c | bbb |)" time="0.106000">
+</testcase>
+<testcase classname="code-breaker submits guess.submit guess" name="submit guess (outline example : | r y g c | g y r g | bww |)" time="0.135000">
+</testcase>
+</testsuite>

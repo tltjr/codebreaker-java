@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" name="code-breaker starts game" tests="1" time="0.440000">
+<testcase classname="code-breaker starts game.start game" name="start game" time="0.440000">
+</testcase>
+</testsuite>

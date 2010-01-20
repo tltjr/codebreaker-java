@@ -1,0 +1,13 @@
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[36m-[0m[36m-[0m[36m-[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+
+[36m0.3560000[0m [32m^I start a new game$[0m[90m                          # CodebreakerSteps.iStartANewGame()[0m
+  [36m0.3560000[0m [32mWhen I start a new game[0m[90m                     # features/codebreaker_starts_game.feature:9[0m
+[36m0.0200000[0m [32m^I am not yet playing$[0m[90m                        # CodebreakerSteps.iAmNotYetPlaying()[0m
+  [36m0.0200000[0m [32mGiven I am not yet playing[0m[90m                  # features/codebreaker_starts_game.feature:8[0m
+[36m0.0175000[0m [32m^I should see "([^"]*)"$[0m[90m                      # CodebreakerSteps.iShouldSeeWelcomeToCodebreaker(String)[0m
+  [36m0.0230000[0m [32mThen I should see "[32m[1mWelcome to Codebreaker![0m[0m[32m"[0m[90m # features/codebreaker_starts_game.feature:10[0m
+  [36m0.0120000[0m [32mAnd I should see "[32m[1mEnter guess:[0m[0m[32m"[0m[90m             # features/codebreaker_starts_game.feature:11[0m
+
+17 scenarios ([32m17 passed[0m)
+52 steps ([32m52 passed[0m)
+0m2.132s
